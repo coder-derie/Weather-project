@@ -1,0 +1,69 @@
+body {
+  font-family: "Mukta", sans-serif;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+h1 {
+  font-family: "Mukta", sans-serif;
+}
+
+ul {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+li {
+  color: #252525;
+  font-size: 18px;
+  font-weight: 100;
+  height: 19px;
+  line-height: 1;
+  list-style: none;
+}
+.container {
+  padding: 40px;
+}
+#page {
+  border-radius: 10px;
+}
+.card {
+  max-width: 100%;
+}
+.date-time {
+  line-height: 20px;
+  color: #00587a;
+}
+.btn {
+  margin-left: 10px;
+}
+.weather-icon {
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+}
+#current-temperature {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+.units {
+  position: relative;
+  top: -34px;
+}
+
+.forecast {
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+.col {
+  padding: 0 12px;
+}
+.row-temp .fa-sun {
+  font-size: 75px;
+}
+.card-body p {
+  font-size: 20px;
+}
