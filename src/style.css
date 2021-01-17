@@ -43,11 +43,12 @@ li {
 #current-temperature {
   color: rgb(33, 33, 33);
   font-size: 64px;
-  font-weight: 400;
   line-height: 1;
+  font-weight: 400;
 }
 .units {
   position: relative;
+  font-size: 16px;
   top: -34px;
 }
 
