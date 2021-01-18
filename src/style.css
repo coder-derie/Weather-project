@@ -21,9 +21,12 @@ li {
 }
 .container {
   padding: 40px;
+  margin: 20px auto;
 }
-#page {
-  border-radius: 10px;
+.page {
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 20px auto;
 }
 .card {
   max-width: 100%;
