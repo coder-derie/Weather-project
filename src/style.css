@@ -20,13 +20,13 @@ li {
   list-style: none;
 }
 .container {
-  padding: 40px;
+  padding: 10px;
   margin: 20px auto;
 }
-.page {
-  border-radius: 15px;
+.mb-3 {
+  border-radius: 10px;
   max-width: 600px;
-  margin: 20px auto;
+  margin-top: 20px;
 }
 .card {
   max-width: 100%;
@@ -59,8 +59,9 @@ li {
   max-width: 100%;
   text-align: center;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
 }
 .col {
   padding: 0 12px;
