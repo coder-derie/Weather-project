@@ -1,6 +1,6 @@
 body {
   font-family: "Mukta", sans-serif;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 h1 {
   font-family: "Mukta", sans-serif;
@@ -71,4 +71,7 @@ li {
 }
 .card-body p {
   font-size: 20px;
+}
+.footer {
+  color: white;
 }
