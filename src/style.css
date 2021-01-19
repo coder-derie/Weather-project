@@ -43,7 +43,7 @@ li {
   width: 64px;
   margin-right: 10px;
 }
-#current-temperature {
+.weather-temperature strong {
   color: rgb(33, 33, 33);
   font-size: 64px;
   line-height: 1;
