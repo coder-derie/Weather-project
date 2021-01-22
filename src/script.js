@@ -55,7 +55,7 @@ function displayWeather(response) {
   );
 
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 
   document.querySelector("#feels-like").innerHTML = `Feels like:${Math.round(
     response.data.main.feels_like
