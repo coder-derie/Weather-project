@@ -67,7 +67,7 @@ function displayWeather(response) {
 
   document.querySelector(
     "#wind"
-  ).innerHTML = `Wind: ${response.data.wind.speed}m/s`;
+  ).innerHTML = `Wind: ${response.data.wind.speed}km/h`;
 }
 
 function showCity(event) {
