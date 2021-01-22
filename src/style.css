@@ -19,6 +19,9 @@ li {
   line-height: 1;
   list-style: none;
 }
+li:first-letter {
+  text-transform: capitalize;
+}
 .container {
   padding: 10px;
   margin: 20px auto;
