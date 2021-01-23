@@ -41,7 +41,7 @@ li:first-letter {
 .btn {
   margin-left: 10px;
 }
-.weather-icon {
+#icon {
   height: 64px;
   width: 64px;
   margin-right: 10px;

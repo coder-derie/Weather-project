@@ -68,6 +68,11 @@ function displayWeather(response) {
   document.querySelector(
     "#wind"
   ).innerHTML = `Wind: ${response.data.wind.speed}km/h`;
+  
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
 }
 
 function showCity(event) {
@@ -122,3 +127,6 @@ let celsiusTemp = document.querySelector("#celsius-link");
 celsiusTemp.addEventListener("click", toCelsius);
 
 searchCity("Miami");
+
+
+
