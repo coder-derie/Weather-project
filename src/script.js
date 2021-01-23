@@ -50,8 +50,9 @@ function displayWeather(response) {
   console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;
 
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#current-temperature").innerHTML = Math.round(
-    response.data.main.temp
+    celsiusTemperature
   );
 
   document.querySelector("#description").innerHTML =
@@ -108,23 +109,29 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", showCity);
 
 //bonus
-function toFarenheit(event) {
+function displayFarenheit(event) {
   event.preventDefault();
-  let currentTemp = document.querySelector("#current-temperature");
-  currentTemp.innerHTML = 35.6;
+  let temperatureElement = document.querySelector("#current-temperature");
+  
+  farenheit-link.classList.add("active");
+  celsius-link.classList.remove("active");
+  let farenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
+  temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
 
-function toCelsius(event) {
+function displayCelsius(event) {
   event.preventDefault();
-  let currentTemp = document.querySelector("#current-temperature");
-  currentTemp.innerHTML = 2;
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+let celsiusTemperature = null;
 
 let farenheitTemp = document.querySelector("#fahrenheit-link");
-farenheitTemp.addEventListener("click", toFarenheit);
+farenheitTemp.addEventListener("click", displayFarenheit);
 
 let celsiusTemp = document.querySelector("#celsius-link");
-celsiusTemp.addEventListener("click", toCelsius);
+celsiusTemp.addEventListener("click", displayCelsius);
 
 searchCity("Miami");
 
