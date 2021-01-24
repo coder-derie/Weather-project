@@ -113,8 +113,8 @@ function displayFarenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
   
-  farenheit-link.classList.add("active");
-  celsius-link.classList.remove("active");
+  celsiusTemp.classList.remove("active");
+  farenheitTemp.classList.add("active");
   let farenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
   temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
@@ -122,6 +122,9 @@ function displayFarenheit(event) {
 function displayCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
+
+  farenheitTemp.classList.remove("active");
+  celsiusTemp.classList.add("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
