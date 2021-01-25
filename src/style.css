@@ -1,6 +1,6 @@
 body {
   font-family: "Mukta", sans-serif;
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 h1 {
   font-family: "Mukta", sans-serif;
@@ -23,8 +23,9 @@ li:first-letter {
   text-transform: capitalize;
 }
 .container {
+  max-width: 1000px;
   padding: 10px;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 .mb-3 {
   border-radius: 10px;
@@ -39,7 +40,7 @@ li:first-letter {
   color: #00587a;
 }
 .btn {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 #icon {
   height: 64px;
