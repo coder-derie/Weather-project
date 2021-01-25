@@ -29,17 +29,7 @@ function formatDate(date) {
   let currentMonth = months[date.getMonth()];
   let currentDate = date.getDate();
 
-  let currentHour = date.getHours();
-  if (currentHour < 10) {
-    currentHour = `0${currentHour}`;
-  }
-
-  let currentMinute = date.getMinutes();
-  if (currentMinute < 10) {
-    currentMinute = `0${currentMinute}`;
-  }
-
-  return `${currentDay} ${currentMonth} ${currentDate} ${currentHour}:${currentMinute}`;
+  return `${currentDay} ${currentMonth} ${currentDate} ${formatHours(date)}`;
 }
 let now = new Date();
 let currentTime = document.querySelector("#current-time");
@@ -76,12 +66,13 @@ function displayWeather(response) {
 }
 
 function formatHours(timestamp){
-  let currentHour = timestamp.getHours();
+  let date = new Date(timestamp)
+  let currentHour = date.getHours();
   if (currentHour < 10) {
     currentHour = `0${currentHour}`;
   }
 
-  let currentMinute = timestamp.getMinutes();
+  let currentMinute = date.getMinutes();
   if (currentMinute < 10) {
     currentMinute = `0${currentMinute}`;
   }
@@ -90,19 +81,24 @@ function formatHours(timestamp){
 }
 function displayForecast(response){
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
-  console.log(forecast);
+  forecastElement.innerHTML = null;
+  let forecast = null;
   
-
-  forecastElement.innerHTML = `<div class="col">
-                        <div class="card border mb-3" style="max-width: 25rem;">
-                            <div class="card-header">${formatHours(forecast.dt* 1000)}</div>
-                            <div class="card-body">
-                                <img src ="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
-                                <p>${Math.round(forecast.main.temp_max)}/${Math.round(forecast.main.temp_min)}</p>
-                            </div>
-                        </div>
-                    </div>`
+  for (let index = 0; index < 5; index++){
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += 
+  `<div class="col">
+    <div class="card border mb-3" style="max-width: 10rem;">
+      <div class="card-header">${formatHours(forecast.dt* 1000)}</div>
+          <div class="card-body">
+            <img src ="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
+              <p>${Math.round(forecast.main.temp_max)}℃/${Math.round(forecast.main.temp_min)}℃</p>
+        </div>
+      </div>
+    </div>
+  </div>`
+  }
+  
 
   
 }
