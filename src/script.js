@@ -37,6 +37,7 @@ currentTime.innerHTML = formatDate(now);
 
 //search engine with weather info
 function displayWeather(response) {
+  console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;
 
   celsiusTemperature = response.data.main.temp;
@@ -125,6 +126,9 @@ function searchLocation(position) {
   let apiKey = "4aebdc826d2f6fe4955b6c3fa809665d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getLocation(event) {
