@@ -74,15 +74,7 @@ li:first-letter {
   padding-bottom: 15px;
   padding-right: 15px;
 }
-.col {
-  padding: 0 12px;
-}
-.row-temp .fa-sun {
-  font-size: 75px;
-}
-.card-body p {
-  font-size: 20px;
-}
+
 .footer {
   color: white;
 }
